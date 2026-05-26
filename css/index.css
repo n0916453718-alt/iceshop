@@ -1,0 +1,462 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Microsoft JhengHei", Arial, sans-serif;
+    background:#f5fbff;
+    color:#0d4774;
+}
+
+/* 最上方橫幅 logo1.png */
+.top-banner{
+    width:100%;
+    height:340px;
+    background:url("../image/logo1.png") center center/cover no-repeat;
+    position:relative;
+}
+
+.top-banner::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:80px;
+    background:linear-gradient(
+        to bottom,
+        rgba(255,255,255,0),
+        rgba(245,251,255,.95)
+    );
+}
+
+/* 導覽列 */
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:99;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 8%;
+    box-shadow:0 5px 20px rgba(0,80,130,.12);
+}
+
+.nav-logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    font-weight:bold;
+    color:#0d4774;
+}
+
+.nav-logo img{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#0d4774;
+    font-weight:bold;
+    padding:8px 6px;
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:#178fd3;
+    border-bottom:3px solid #178fd3;
+}
+
+/* 中間主視覺 logo3.png */
+.hero{
+    width:88%;
+    max-width:1200px;
+    margin:42px auto;
+    padding:70px;
+    border-radius:34px;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.12), rgba(255,255,255,.35)),
+        url("../image/logo3.png");
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+
+    box-shadow:0 25px 45px rgba(90,170,220,.25);
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"🧊";
+    position:absolute;
+    left:30px;
+    bottom:25px;
+    font-size:80px;
+    opacity:.22;
+}
+
+.hero-text{
+    flex:1;
+    position:relative;
+    z-index:2;
+}
+
+.sub-title{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:18px;
+    color:#0d4774;
+}
+
+.hero h1{
+    font-size:76px;
+    letter-spacing:5px;
+    margin-bottom:12px;
+    color:#0d4774;
+}
+
+.hero h2{
+    font-size:30px;
+    color:#178fd3;
+    margin-bottom:30px;
+}
+
+.slogan{
+    font-size:24px;
+    line-height:1.8;
+    color:#333;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.hero-buttons a{
+    text-decoration:none;
+    background:#178fd3;
+    color:white;
+    padding:15px 30px;
+    border-radius:40px;
+    font-weight:bold;
+    box-shadow:0 8px 18px rgba(23,143,211,.25);
+    transition:.3s;
+}
+
+.hero-buttons a:hover{
+    transform:translateY(-6px);
+    background:#0d74b4;
+}
+
+.hero-buttons .outline{
+    background:white;
+    color:#178fd3;
+    border:2px solid #178fd3;
+}
+
+/* 右側主圖 */
+.hero-card{
+    flex:1;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+.hero-card img{
+    width:100%;
+    max-width:420px;
+    border-radius:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+    border:10px solid white;
+    transform:rotate(2deg);
+}
+
+/* 我們的堅持 */
+.features{
+    width:88%;
+    max-width:1000px;
+    margin:65px auto;
+    text-align:center;
+}
+
+.features h2{
+    font-size:34px;
+    margin-bottom:35px;
+    letter-spacing:4px;
+    color:#0d4774;
+}
+
+.feature-box{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+}
+
+.feature{
+    background:white;
+    padding:28px;
+    border-radius:24px;
+    border:2px dashed #9eddf8;
+    box-shadow:0 12px 25px rgba(90,170,220,.16);
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(90,170,220,.25);
+}
+
+.icon{
+    width:82px;
+    height:82px;
+    margin:0 auto 16px;
+    border-radius:50%;
+    background:#cceeff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:38px;
+}
+
+.feature h3{
+    font-size:24px;
+    margin-bottom:10px;
+    color:#0d4774;
+}
+
+.feature p{
+    color:#496878;
+    line-height:1.7;
+}
+
+/* 四個分頁卡片 */
+.page-cards{
+    width:88%;
+    max-width:1150px;
+    margin:70px auto 90px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:26px;
+}
+
+.card{
+    text-decoration:none;
+    background:white;
+    color:#0d4774;
+    padding:22px;
+    border-radius:24px;
+    box-shadow:0 12px 28px rgba(0,80,130,.14);
+    transition:.3s;
+    text-align:center;
+    overflow:hidden;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,80,130,.22);
+}
+
+.card span{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.card h3{
+    font-size:28px;
+    margin:8px 0 18px;
+}
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:16px;
+    margin-bottom:18px;
+}
+
+.card p{
+    color:#4b6574;
+    line-height:1.7;
+    min-height:75px;
+}
+
+.card button{
+    border:none;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    margin-top:12px;
+}
+
+.blue span,
+.blue h3{ 
+    color:#178fd3; 
+}
+
+.blue button{ 
+    background:#178fd3; 
+}
+
+.yellow span,
+.yellow h3{ 
+    color:#e0a000; 
+}
+
+.yellow button{ 
+    background:#e0a000; 
+}
+
+.green span,
+.green h3{ 
+    color:#4c9a42; 
+}
+
+.green button{ 
+    background:#4c9a42; 
+}
+
+.purple span,
+.purple h3{ 
+    color:#7f55b5; 
+}
+
+.purple button{ 
+    background:#7f55b5; 
+}
+
+/* 最下面冰塊背景 logo4.png */
+footer{
+    text-align:center;
+    padding:90px 20px;
+    background-image:
+        linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.35)),
+        url("../image/logo4.png");
+    background-size:cover;
+    background-position:center;
+    color:#0d4774;
+}
+
+footer h2{
+    font-size:36px;
+    margin-bottom:10px;
+    letter-spacing:3px;
+}
+
+footer p{
+    font-size:18px;
+}
+
+/* 平板版 */
+@media(max-width:900px){
+    .top-banner{
+        height:240px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:14px;
+    }
+
+    .hero{
+        flex-direction:column;
+        padding:45px 28px;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-card img{
+        max-width:360px;
+    }
+
+    .feature-box,
+    .page-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* 手機版 */
+@media(max-width:550px){
+    .top-banner{
+        height:150px;
+    }
+
+    .nav-logo{
+        font-size:20px;
+    }
+
+    .nav-logo img{
+        width:36px;
+        height:36px;
+    }
+
+    .hero{
+        width:92%;
+        padding:36px 22px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero h2{
+        font-size:22px;
+    }
+
+    .slogan{
+        font-size:20px;
+    }
+
+    .feature-box,
+    .page-cards{
+        grid-template-columns:1fr;
+    }
+
+    .card img{
+        height:200px;
+    }
+
+    footer{
+        padding:70px 20px;
+    }
+}
