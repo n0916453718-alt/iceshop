@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配料區｜阿行冰店</title>
+
+    <link rel="stylesheet" href="../css/page3.css">
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <img src="../image/logo2.jpg" alt="阿行冰店 logo">
+            <span>阿行冰店</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="../index.html">首頁</a>
+            <a href="../page1/page1.html">招牌冰品</a>
+            <a href="../page2/page2.html">菜單</a>
+            <a href="page3.html" class="active">配料區</a>
+            <a href="../page4/page4.html">店家資訊</a>
+        </div>
+    </nav>
+
+    <!-- 頁面主視覺 -->
+    <header class="page-hero">
+        <div class="hero-content">
+            <p class="hero-tag">手作配料</p>
+            <h1>阿行冰店配料區</h1>
+            <p>
+                從手工圓仔到古早味豆類，<br>
+                每一種配料都是冰品裡最熟悉的台灣味。
+            </p>
+        </div>
+    </header>
+
+    <!-- 分類快速按鈕 -->
+    <section class="filter-area">
+        <button onclick="showAll()" class="filter-btn active-btn">全部配料</button>
+        <button onclick="scrollToSection('handmade')" class="filter-btn">招牌手作</button>
+        <button onclick="scrollToSection('classic')" class="filter-btn">經典配料</button>
+        <button onclick="scrollToSection('kids')" class="filter-btn">小孩最愛</button>
+        <button onclick="scrollToSection('oldtaste')" class="filter-btn">古早味系列</button>
+    </section>
+
+    <main class="topping-wrapper">
+
+        <!-- 招牌手作 -->
+        <section class="topping-section" id="handmade">
+            <div class="section-title">
+                <span>招牌手作</span>
+                <p>每日製作，保留最單純的古早味口感。</p>
+            </div>
+
+            <div class="topping-grid">
+                <div class="topping-card">
+                    <img src="../image/topping1.png" alt="湯圓">
+                    <h3>湯圓</h3>
+                    <p>每日手作湯圓，<br>吃得到純粹米香。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping2.png" alt="地瓜圓">
+                    <h3>地瓜圓</h3>
+                    <p>糯米與地瓜慢工製成，<br>口感紮實又Q彈。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping3.png" alt="芋圓">
+                    <h3>芋圓</h3>
+                    <p>糯米揉入新鮮芋頭，<br>Q彈中吃得到古早味。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping4.png" alt="鳳梨">
+                    <h3>鳳梨</h3>
+                    <p>慢火熬煮鳳梨，<br>酸甜交織最開胃。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 經典配料 -->
+        <section class="topping-section" id="classic">
+            <div class="section-title blue-sticker">
+                <span>經典配料</span>
+                <p>清爽、綿密、滑順，讓每碗冰更有層次。</p>
+            </div>
+
+            <div class="topping-grid">
+                <div class="topping-card">
+                    <img src="../image/topping5.png" alt="白木耳">
+                    <h3>白木耳</h3>
+                    <p>天然白木耳慢火燉煮，<br>口感滑嫩又帶蜜香。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping6.png" alt="地瓜">
+                    <h3>地瓜</h3>
+                    <p>鬆軟綿密的蜜地瓜，<br>每一口都帶著天然甜香。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping7.png" alt="芋頭">
+                    <h3>芋頭</h3>
+                    <p>嚴選新鮮芋頭熬製，<br>保留最自然的濃郁芋香。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping8.png" alt="仙草">
+                    <h3>仙草</h3>
+                    <p>滑嫩仙草凍，<br>入口清涼又回甘。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 小孩最愛 -->
+        <section class="topping-section" id="kids">
+            <div class="section-title yellow-sticker">
+                <span>小孩最愛</span>
+                <p>繽紛、Q彈、滑嫩，是冰品裡最有趣的口感。</p>
+            </div>
+
+            <div class="topping-grid">
+                <div class="topping-card">
+                    <img src="../image/topping9.png" alt="粉粿">
+                    <h3>粉粿</h3>
+                    <p>蜜香粉粿滑嫩順口，<br>是夏天最熟悉的味道。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping10.png" alt="愛玉">
+                    <h3>愛玉</h3>
+                    <p>冰涼愛玉配剉冰，<br>最適合炎炎夏日。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping11.png" alt="珍珠">
+                    <h3>珍珠</h3>
+                    <p>Q彈有嚼勁，<br>經典古早味必點。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping12.png" alt="QQ圓">
+                    <h3>QQ圓</h3>
+                    <p>繽紛QQ圓，<br>軟Q滑順有口感。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 古早味系列 -->
+        <section class="topping-section" id="oldtaste">
+            <div class="section-title brown-sticker">
+                <span>古早味系列</span>
+                <p>慢火熬煮的豆香，是台灣冰品最經典的味道。</p>
+            </div>
+
+            <div class="topping-grid">
+                <div class="topping-card">
+                    <img src="../image/topping13.png" alt="紅豆">
+                    <h3>紅豆</h3>
+                    <p>慢火熬煮蜜紅豆，<br>香甜綿密不膩口。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping14.png" alt="綠豆">
+                    <h3>綠豆</h3>
+                    <p>古早味綠豆配料，<br>清甜不膩最適合夏天。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping15.png" alt="薏仁">
+                    <h3>薏仁</h3>
+                    <p>細火慢熬薏仁，<br>帶出最純粹的豆香。</p>
+                </div>
+
+                <div class="topping-card">
+                    <img src="../image/topping16.png" alt="大豆">
+                    <h3>大豆</h3>
+                    <p>古早味蜜大豆，<br>甜香濃郁不死甜。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 隨機配料區 -->
+    <section class="random-topping">
+        <h2>不知道要加什麼？</h2>
+        <p>讓阿行冰店幫你抽一個配料！</p>
+
+        <button onclick="randomTopping()">隨機抽配料</button>
+
+        <div id="randomResult" class="random-result">
+            <span>🍧</span>
+            <h3>按下按鈕開始抽選</h3>
+        </div>
+    </section>
+
+    <footer>
+        <h2>阿行冰店</h2>
+        <p>古早味剉冰・新鮮果汁</p>
+    </footer>
+
+    <script src="../javascript/page3.js"></script>
+</body>
+</html>
